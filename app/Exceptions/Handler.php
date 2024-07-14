@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use App\Http\Controllers\ApiController;
 use Exception;
 use Error;
 use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
@@ -15,7 +16,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-class Handler extends Exception
+class Handler extends ApiController
 {
     public function render($request, Throwable $e)
     {
